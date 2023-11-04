@@ -12,7 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  Box todoBox = Hive.box<TodoModel>('todoBox');
+    Box todoBox = Hive.box<TodoModel>('todoBox');
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +35,6 @@ if(todoBox.isEmpty){
                       return Expanded(
                         child: Card(
                           child: ListTile(
-                            // onLongPress: () {},
                             title: Text(newTodo.title),
                             subtitle: Text(newTodo.contant),
                             leading: IconButton(onPressed: (){
@@ -60,7 +60,7 @@ if(todoBox.isEmpty){
         Navigator.push(
             context, MaterialPageRoute(builder: (context) => AddTodo()));
       },
-      backgroundColor: const Color.fromARGB(255, 247, 245, 245),
+      backgroundColor: const Color.fromARGB(255, 247, 245, 245),    
       child: Icon(Icons.add,
       color: Colors.red ,
       size: 40,),),
