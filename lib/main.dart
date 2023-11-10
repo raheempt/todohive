@@ -10,7 +10,7 @@ void main()async{
   WidgetsFlutterBinding.ensureInitialized();
   Directory directory =await getApplicationDocumentsDirectory();  
   Hive.init(directory.path);
-  Hive.registerAdapter<TodoModel>(TodoModelAdapter());
+  Hive.registerAdapter<TodoModel>(TodoModelAdapter());    
   await Hive.openBox<TodoModel>('todoBox');
   runApp(MyApp());
 

@@ -5,7 +5,7 @@ import 'package:todohive/screens/add_todo.dart';
 import 'package:todohive/screens/edit_screen.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const   HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -29,7 +29,7 @@ if(todoBox.isEmpty){
          
               return ListView.builder(
                   itemCount: todoBox.length,
-                  itemBuilder: (context, index) {
+                  itemBuilder: (ctx, index) {
                     TodoModel newTodo = todoBox.getAt(index);
 
                       return Expanded(
@@ -41,7 +41,7 @@ if(todoBox.isEmpty){
                               Navigator.push(context, MaterialPageRoute(builder: (context)=>EditScreen(index: index, tittle: newTodo.title,content: newTodo.contant,)));
                             }, icon:const Icon(Icons.edit,color: Colors.blue,)),
                             trailing: IconButton(
-                                onPressed: () {
+                                onPressed: ()async {
                                   todoBox.deleteAt(index).then((value) =>  
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(SnackBar(

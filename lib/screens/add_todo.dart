@@ -15,12 +15,12 @@ class _AddTodoState extends State<AddTodo> {
   Box todoBox = Hive.box<TodoModel>('todoBox');
 
   
-@override
-  void dispose() {
-    titleControllar.dispose();
-    contentControllar.dispose();
-    super.dispose();
-  }
+// @override
+//   void dispose() {
+//     titleControllar.dispose();
+//     contentControllar.dispose();
+//     super.dispose();
+//   }
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
@@ -41,6 +41,7 @@ class _AddTodoState extends State<AddTodo> {
           TextFormField(
             controller: contentControllar,
              decoration: InputDecoration(
+              
                   labelText: 'content',
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(32),

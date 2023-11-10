@@ -13,12 +13,12 @@ class EditScreen extends StatefulWidget {
 
 
   @override
-  State<EditScreen> createState() => _EditScreenState();
+  State<EditScreen> createState() => _EditScreenState();  
 }
 
 class _EditScreenState extends State<EditScreen> {
    final titleControllar = TextEditingController();
-  final contentControllar = TextEditingController();
+  final contentControllar = TextEditingController();      
   Box todoBox = Hive.box<TodoModel>('todoBox');
   @override
   Widget build(BuildContext context) {
