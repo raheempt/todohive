@@ -57,7 +57,7 @@ controller: titleControllar..text=widget.tittle,
 
               todoBox.putAt(widget.index, edit);
               Navigator.pop(context);
-            }, child: Text('Save Todo'))
+            }, child: Text('Save '))
           ],
         ),
       ),
